@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/htmx.org@1.7.0" integrity="sha384-EzBXYPt0/T6gxNp0nuPtLkmRpmDBbjg6WmCUZRLXBBwYYmwAUxzlSGej0ARHX0Bo" crossorigin="anonymous" defer></script>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  </head>
+  <body class="bg-gray-50">
+    <nav class="py-3 bg-blue-500">
+      <div class="container mx-auto flex items-center justify-between font-bold text-white text-lg">
+        <ul class="flex ml-auto items-center">
+          <li class="nav-item mr-5">
+            <a class="hover:opacity-75" 
+               href="/about">Salvatore Tosti</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container mx-auto my-10">
+      <div class="max-w-xl mx-auto">
+        <div class="text-center">
+          <h1 class="my-3 text-5xl font-bold text-gray-700">Example</h1>
+          <p class="text-gray-400">Fill out the form below to use HTMX in an AWS lambda.</p>
+        </div>
+        <div>
+          <form 
+            hx-post="https://etfu2tgcbfs65atjaqmnl3fdfa0nwsnp.lambda-url.us-east-2.on.aws/"  
+            hx-target="this"
+            hx-swap="outerHTML"> 
+            <div class="mb-6">
+              <label class="block mb-2 text-sm text-gray-600" for="name">Name</label>
+              <input
+                  class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md  focus:outline-none focus:ring focus:ring-blue-100 focus:border-blue-300"
+                  type="text"
+                  name="name"
+                  placeholder="Pat Doe"
+                  required/>
+            </div>
+            <div class="mb-6">
+              <label class="block mb-2 text-sm text-gray-600" for="message">Message</label>
+              <textarea
+                  rows="3"
+                  name="message"
+                  placeholder="Blah blah blah..."
+                  class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md  focus:outline-none focus:ring focus:ring-blue-100 focus:border-blue-300"
+                  required></textarea>
+            </div>
+
+            <button
+                type="submit"
+                class="w-full px-2 py-4 text-white bg-blue-500 rounded-md focus:bg-blue-600 focus:outline-none hover:bg-blue-600">
+              <div class="flex justify-center items-center">
+                <div class="mr-3">Submit</div>
+                <img 
+                   class="htmx-indicator w-25" 
+                   src="https://s3.us-east-2.amazonaws.com/www.tosti.consulting/img/svg-loaders/tail-spin.svg">
+              </div>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+i
