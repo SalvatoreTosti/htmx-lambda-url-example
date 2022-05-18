@@ -41,8 +41,8 @@ def lambda_handler(event, context):
   - hx-request
 * Select the following values under “Allow methods”
   - POST
-* Click “Save"
-* In the main menu, look for the `Function URL` and open it in a new tab, you should see:
+7. Click “Save"
+8. In the main menu, look for the `Function URL` and open it in a new tab, you should see:
   ```
     Hello {name} from a lambda!
     Your message: {message}
