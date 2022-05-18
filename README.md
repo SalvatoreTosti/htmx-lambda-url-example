@@ -1,5 +1,7 @@
 # HTMX AWS Lambda URL Example
 
+### [Hosted Example](https://www.saltosti.com/projects/htmx-lambda-url-example/)
+
 ### Configuring the Lambda
 1. Create a new lambda with the following
 * Function name - HTMX-example-lambda
@@ -44,8 +46,8 @@ def lambda_handler(event, context):
 7. Click “Save"
 8. In the main menu, look for the `Function URL` and open it in a new tab, you should see:
   ```
-    Hello {name} from a lambda!
-    Your message: {message}
+    Hello None from a lambda!
+    Your message: None
   ```
   
 ### Testing Locally
