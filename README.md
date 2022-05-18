@@ -44,8 +44,8 @@ def lambda_handler(event, context):
 7. Click “Save"
 8. In the main menu, look for the `Function URL` and open it in a new tab, you should see:
   ```
-    Hello {name} from a lambda!
-    Your message: {message}
+    Hello None from a lambda!
+    Your message: None
   ```
   
 ### Testing Locally
