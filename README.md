@@ -47,3 +47,14 @@ def lambda_handler(event, context):
     Hello {name} from a lambda!
     Your message: {message}
   ```
+  
+### Testing Locally
+1. Edit the `index.html` file and set the `form.hx-post` attribute to your lambda’s URL
+2. Drag `index.html` to your browser
+3. Enter values into the `Name` and `Message` fields and click “Submit”
+4. Observe that the form is replaced by:
+```
+Hello <your name> from a lambda!
+Your message: <your message>
+```
+
