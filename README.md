@@ -1,5 +1,7 @@
 # HTMX AWS Lambda URL Example
 
+### [Hosted Example](https://www.saltosti.com/projects/htmx-lambda-url-example/)
+
 ### Configuring the Lambda
 1. Create a new lambda with the following
 * Function name - HTMX-example-lambda
