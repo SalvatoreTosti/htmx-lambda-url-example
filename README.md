@@ -1,10 +1,10 @@
-# HTMX lambda URL example
+# HTMX AWS Lambda URL Example
 
-## Configuring the Lambda
+### Configuring the Lambda
 1. Create a new lambda with the following
 * Function name - HTMX-example-lambda
 * Runtime - Python 3.9
-* Architecture x86_64
+* Architecture - x86_64
 
 2. Under the `Code` tab, locate the `lambda_function.py` file and edit it to be as follows:
 ```python
@@ -26,3 +26,24 @@ def lambda_handler(event, context):
     }
 ```
 3. Click the ‘Deploy’ button
+4. Under the `Configuration` tab select `Function URL` from the left navigation panel
+5. Then click the `Create function URL` button
+6. Create a Function URL with the following properties
+* Auth type - `NONE`
+* Configure cross-origin resource sharing (CORS) - Enabled
+* Allow origin - `*` (allow all)
+* Add the following values under “Expose headers”
+  - access-control-allow-origin
+  - access-control-allow-methods
+  - access-control-allow-headers
+* Add the following values under “Allow headers”
+  - hx-current-url
+  - hx-request
+* Select the following values under “Allow methods”
+  - POST
+* Click “Save"
+* In the main menu, look for the `Function URL` and open it in a new tab, you should see:
+  ```
+    Hello {name} from a lambda!
+    Your message: {message}
+  ```
