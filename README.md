@@ -3,7 +3,7 @@
 ### [Hosted Example](https://www.saltosti.com/projects/htmx-lambda-url-example/)
 
 ### Configuring the Lambda
-1. Create a new lambda with the following
+1. Create a new lambda with the following settings
 * Function name - HTMX-example-lambda
 * Runtime - Python 3.9
 * Architecture - x86_64
