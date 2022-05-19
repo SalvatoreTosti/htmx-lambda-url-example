@@ -3,7 +3,7 @@
 ### [Hosted Example](https://www.saltosti.com/projects/htmx-lambda-url-example/)
 
 ### Configuring the Lambda
-1. Create a new lambda with the following settings
+1. Create a new lambda with the following settings:
 * Function name - HTMX-example-lambda
 * Runtime - Python 3.9
 * Architecture - x86_64
@@ -30,7 +30,7 @@ def lambda_handler(event, context):
 3. Click the ‘Deploy’ button
 4. Under the `Configuration` tab select `Function URL` from the left navigation panel
 5. Then click the `Create function URL` button
-6. Create a Function URL with the following properties
+6. Create a Function URL with the following properties:
 * Auth type - `NONE`
 * Configure cross-origin resource sharing (CORS) - Enabled
 * Allow origin - `*` (allow all)
